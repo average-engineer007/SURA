@@ -1,0 +1,17 @@
+for 2 nodes 3.2567808628082275
+for 4 nodes 19.710580110549927 seconds
+for 6 nodes 1141.203+ seconds (the code does not terminate)
+
+on using if encoding 
+for 2 nodes 0.6269831657409668 seconds
+for 4 nodes 1.8318147659301758 seconds
+for 6 nodes  300+ seconds (the code does not terminate)
+
+
+for gurobi
+for 2 nodes 0.02118659019470215 seconds
+for 4 nodes 0.014685630798339844 seconds
+for 8 nodes  0.024750471115112305 seconds
+for 16 nodes  0.04726982116699219 seconds
+for 32 nodes  0.09119725227355957 seconds
+for 64 nodes 0.22158241271972656 seconds

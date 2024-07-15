@@ -18,7 +18,7 @@ def parse_file(file_path):
     return n, l, weights, biases
 
 
-file_path = 'output.txt'
+file_path = 'weight_biases_5_nodes.txt'
 
 n, l, weights, biases = parse_file(file_path)
 
@@ -60,14 +60,16 @@ for i in range(len(l)):
 
 
 # adding this makes the code run for infinity
-# for i in range(l[0]):
-#     s.add(And(vars[0][i]<=1,vars[0][i]>=0))
+for i in range(l[0]):
+    s.add(And(vars[0][i]<=1,vars[0][i]>=0))
 
 
-l=[]
+t=[]
 for i in range(28):
-    l.append(vars[0][28*i+14])
-s.add(Implies(Sum(l)>=14,vars[3][1]<0))
+    t.append(vars[0][28*i+14])
+s.add(Not(Implies(Sum(t)>=14,vars[3][1]<0)))
+
+
 
 start_time = time.time()
 if s.check() == sat:
